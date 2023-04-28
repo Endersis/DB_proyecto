@@ -1,0 +1,9 @@
+.textfield-navigation{
+  
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 4px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
