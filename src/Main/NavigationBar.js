@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import {  Box, Menu, MenuItem,  RadioGroup,  Stack,  TextField } from '@mui/material';
+import {  Box, Link, Menu, MenuItem,  RadioGroup,  Stack,  TextField } from '@mui/material';
 import './navigationbar.css'
 function NavigationBar() {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -54,14 +54,33 @@ function NavigationBar() {
             keepMounted
             anchorEl={anchorEl}
           >
+          
             <MenuItem onClick={handleMenuClose} >Home</MenuItem>
             <MenuItem onClick={handleMenuClose}>About</MenuItem>
             <MenuItem onClick={handleMenuClose}>Contact</MenuItem>
           </Menu>
+          
+          <Stack direction="row" spacing={8}>       
+          
           <Typography variant="h6" >
-            MyApp
+            SIPIRILI
           </Typography>
-          <Box  ml={250} >  
+
+          <Typography variant='h6'>
+            Inicio
+          </Typography>
+          <Typography variant='h6'>
+            Conocenos
+          </Typography>
+          <Typography variant='h6'>
+            Sucursales
+          </Typography>
+          <Typography variant='h6'>
+            Referencias
+          </Typography>
+          </Stack>
+
+          <Box  ml={50} >  
           <form onSubmit={handleLoginSubmit}    >
           <Stack spacing={2} direction="row">
             <TextField
