@@ -8,15 +8,17 @@ import  './landing.css'
 
     return (
         <>
-           <Paper className='paper' >
-           <Card component="li" sx={{ minWidth: 300, flexGrow: 1 }}>
-                <Box ml={70}>
-                <img src='https://image.jimcdn.com/app/cms/image/transf/dimension=634x10000:format=jpg/path/sdd2b9b442c59d78e/image/i166485a3387446bb/version/1626331627/como-planificar-una-fiesta-infantil.jpg'/>
+           <Box className='paper' >
+          
+                <Box >
+                <img src='https://muchosnegociosrentables.com/wp-content/uploads/2020/10/como-crear-una-empresa-de-eventos-infantiles.jpg'
+                height={700}
+                width={1700}/> 
                 </Box>
           
             
-           </Card>
-           </Paper>
+          
+           </Box>
         </>
       )
 
