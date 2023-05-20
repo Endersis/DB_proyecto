@@ -88,11 +88,23 @@ import './login.css'
                mt={4}
                >
               <TextField
+                  name="Correo"
+                  label="correo"
+                  variant="standard"
+                  maxRows={4}
+    
+                />
+                </Stack>
+            <Stack
+               spacing={8}
+               mt={4}
+               >
+              <TextField
                   name="Direccion"
                   label="Direccion"
                   multiline
-                  variant="standard"
                   maxRows={4}
+                  variant="filled"
     
                 />
                 </Stack>

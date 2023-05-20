@@ -5,17 +5,24 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import {  Box, Link, Menu, MenuItem,  RadioGroup,  Stack,  TextField } from '@mui/material';
+import {  Box,  Menu, MenuItem,  Stack,   } from '@mui/material';
 import Login from './loginPop/login';
 import RegisterDialog from './loginPop/register';
 import './navigationbar.css'
+import Conocenos from '../conocenos';
+import { Link } from 'react-router-dom';
+
 function NavigationBar() {
     const [anchorEl, setAnchorEl] = useState(null);
     const [loginData, setLoginData] = useState({ email: '', password: '' });
     const [open, setOpen] = useState(null);
-    const [openOut, setOpenOut] = useState(true);
+
     const [register, setRegister] = useState(null);
-    const [registerOut, setRegisterOut] = useState(true);
+
+   
+   
+ 
+    
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
       };
@@ -42,15 +49,17 @@ function NavigationBar() {
       const HandleLogin = () => {
        
         setOpen(true);
-        setOpenOut(false);
+   
       };
 
       const HandleRegister = () => {
        
         setRegister(true);
-        setRegisterOut(false);
+
       };
 
+   
+      
 
   return (
     <div  >
@@ -83,18 +92,21 @@ function NavigationBar() {
           FROEBEL
           </Typography> 
 
-          <Typography  variant='h6'>
+          <Button  variant='h6'>
             Inicio
-          </Typography>
-          <Typography variant='h6'>
+          </Button>
+          <Link to = "../conocenos">
+          <Button  variant='h6'>
             Conocenos
-          </Typography>
-          <Typography variant='h6'>
+          </Button>
+          </Link>
+        
+          <Button variant='h6'>
             Sucursales
-          </Typography>
-          <Typography variant='h6'>
+          </Button>
+          <Button variant='h6'>
             Referencias
-          </Typography>
+          </Button>
           </Stack>
           <Login
            handleClose={() => setOpen(false)}
