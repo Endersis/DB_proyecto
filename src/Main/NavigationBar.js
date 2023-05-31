@@ -9,7 +9,6 @@ import {  Box,  Menu, MenuItem,  Stack,   } from '@mui/material';
 import Login from './loginPop/login';
 import RegisterDialog from './loginPop/register';
 import './navigationbar.css'
-import Conocenos from '../conocenos';
 import { Link } from 'react-router-dom';
 
 function NavigationBar() {
@@ -92,22 +91,33 @@ function NavigationBar() {
           FROEBEL
           </Typography> 
 
-          <Button  variant='h6'>
-            Inicio
-          </Button>
+       
           <Link to = "../conocenos">
           <Button  variant='h6'>
             Conocenos
           </Button>
           </Link>
         
-          <Button variant='h6'>
+          <Link to = "../sucursales">
+          <Button  variant='h6'>
             Sucursales
           </Button>
-          <Button variant='h6'>
-            Referencias
+          </Link>
+
+          <Link to = "../admin">
+          <Button  variant='h6'>
+            Admin
           </Button>
+          </Link>
+
+
+          <Link to = "../agendar">
+          <Button  variant='h6'>
+            Agendar
+          </Button>
+          </Link>
           </Stack>
+
           <Login
            handleClose={() => setOpen(false)}
            open={open}/>

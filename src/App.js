@@ -4,6 +4,9 @@ import { theme } from "./theme";
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Conocenos from "./conocenos";
+import Admin from "./admin";
+import Agendar from "./agendar";
+import Sucursales from "./sucursales";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <Routes>
     <Route exact path="/" element={<Main/>} />
     <Route  path="/conocenos" element={<Conocenos/>} />
+    <Route  path="/admin" element={<Admin/>} />
+    <Route  path="/agendar" element={<Agendar/>} />
+    <Route  path="/sucursales" element={<Sucursales/>} />
     </Routes>
   </Router>
   </ThemeProvider>

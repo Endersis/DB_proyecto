@@ -2,13 +2,11 @@
   "name": "db-proyect",
   "version": "0.1.0",
   "private": true,
-  "main": "server.js",
-
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.2",
+    "@mui/material": "^5.13.2",
     "@mui/styled-engine-sc": "^5.12.0",
     "@mui/styles": "^5.12.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -27,7 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
