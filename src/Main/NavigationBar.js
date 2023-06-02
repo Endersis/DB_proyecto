@@ -103,6 +103,12 @@ function NavigationBar() {
             Sucursales
           </Button>
           </Link>
+          <Link to = "../paquetes">
+          <Button  variant='h6'>
+            paquetes
+          </Button>
+          </Link>
+
 
           <Link to = "../admin">
           <Button  variant='h6'>

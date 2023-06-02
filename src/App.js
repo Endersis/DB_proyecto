@@ -7,21 +7,13 @@ import Conocenos from "./conocenos";
 import Admin from "./admin";
 import Agendar from "./agendar";
 import Sucursales from "./sucursales";
+import PaquetesPage from "./paquetes";
 
 
 
 function App() {
 
-  const[registros, setRegistros] = useState([])
-  useEffect(() => {
-    const getRegistros = ()=>{
-        fetch('http://localhost:9000/api')
-        .then(res=> res.json())
-        .then(res=> console.log(res))
-    }
-    getRegistros()
-    
-    },[])
+  
   return (
     <ThemeProvider theme={theme}>
     <Router>
@@ -31,6 +23,7 @@ function App() {
     <Route  path="/admin" element={<Admin/>} />
     <Route  path="/agendar" element={<Agendar/>} />
     <Route  path="/sucursales" element={<Sucursales/>} />
+    <Route  path="/paquetes" element={<PaquetesPage/>} />
     </Routes>
   </Router>
   </ThemeProvider>

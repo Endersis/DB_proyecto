@@ -1,5 +1,32 @@
 import React from 'react';
-import { Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
+import { Grid, Card, CardContent, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  card: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+  },
+  cardImageContainer: {
+    position: 'relative',
+    height: '0',
+    paddingTop: '56.25%', // Proporción 16:9
+    backgroundColor: theme.palette.grey[200],
+    overflow: 'hidden',
+  },
+  cardImage: {
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+}));
 
 const sucursales = [
   {
@@ -20,20 +47,31 @@ const sucursales = [
 ];
 
 const Sucursales = () => {
+  const classes = useStyles();
+
   return (
     <div>
       <Typography variant="h4" align="center" gutterBottom>
         Sucursales de Salones de Fiesta
       </Typography>
-      <Grid container spacing={2} justify="center">
+      <Grid container spacing={2} justifyContent="center">
         {sucursales.map((sucursal, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card>
-              <CardMedia component="img" alt={sucursal.nombre} height="200" image={sucursal.imagen} />
-              <CardContent>
+            <Card className={classes.card}>
+              <div className={classes.cardImageContainer}>
+                <img
+                  className={classes.cardImage}
+                  src={sucursal.imagen}
+                  alt={sucursal.nombre}
+                />
+              </div>
+              <CardContent className={classes.cardContent}>
                 <Typography variant="h6">{sucursal.nombre}</Typography>
-                <Typography variant="body2" color="textSecondary">{sucursal.descripcion}</Typography>
+                <Typography variant="body2" color="textSecondary">
+                  {sucursal.descripcion}
+                </Typography>
               </CardContent>
+              {/* Agrega más componentes, botones o detalles aquí */}
             </Card>
           </Grid>
         ))}
